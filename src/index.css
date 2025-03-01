@@ -1,0 +1,301 @@
+/* General Styles for the Page */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.bg-blue-600 {
+  background-color: #2563eb;
+}
+.bg-black-400 {
+  background-color: #202020;
+}
+
+.bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hover\\:bg-blue-700:hover {
+  background-color: #1d4ed8;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* Default: 1 card per row */
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.sm\\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 cards per row for small screens */
+}
+
+.md\\:grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.lg\\:grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gap-6 {
+  gap: 1.5rem; /* Add consistent spacing between cards */
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Card Styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  margin: 0 auto;
+  min-height: 400px; /* Set a fixed minimum height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 350px;   /* Ensure image takes full width */
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover; /* Maintain aspect ratio, crop image to fit */
+  border-radius: 0.5rem 0.5rem 0 0; /* Rounded top corners */
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem; /* Space between image and title */
+  margin-bottom: 0.5rem; /* Space between title and price */
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 1rem; /* Space between description and button */
+}
+
+.card .content {
+  flex-grow: 1;
+}
+
+/* Hover Animation */
+.card:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1); /* Add a bigger shadow on hover */
+}
+
+/* Button Styles */
+button {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:focus {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+/* Input Styles */
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #374151;
+}
+
+input:focus {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+/* Navbar styling */
+header {
+  background-color: #2563eb; /* Blue background */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+header svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+/* Navbar Links */
+header a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+header a:hover {
+  color: #d1d5db;
+  transition: color 0.3s;
+}
+
+/* Login button */
+header button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+header button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Flexbox for alignment */
+header .flex {
+  display: flex;
+  align-items: center;
+}
+
+header .space-x-4 > *:not(:last-child) {
+  margin-right: 1rem;
+}
+/* Categories Dropdown */
+.relative {
+  position: relative;
+}
+
+/* Categories Dropdown */
+.absolute {
+  position: absolute;
+  top: 100%; /* Ensures the dropdown is below the Categories button */
+  color: white;
+  background-color: #1d4ed8;
+  padding: 0.5rem; /* More padding for better spacing */
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  width: auto; /* Let the width adjust based on the content */
+  min-width: 120px; /* Set a minimum width */
+  z-index: 10;
+  display: flex;
+  flex-direction: column; /* Stack the items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Links inside the dropdown */
+.block {
+  display: block; /* Ensures links are stacked vertically */
+  padding: 0.75rem 1rem; /* Add more padding to give space */
+  text-decoration: none;
+  color: white;
+  text-align: center; /* Center text horizontally */
+}
+
+/* Hover effect for links */
+.block:hover {
+  background-color: #5a6e89; /* Darken background on hover */
+}
